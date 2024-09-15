@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS=-Wall -Wextra
-TARGET=SimpleCache
+TARGET=SimpleCache.o
 
 all:
 	$(CC) $(CFLAGS) SimpleProgram.c SimpleCache.c -o $(TARGET)
