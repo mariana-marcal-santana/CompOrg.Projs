@@ -7,8 +7,6 @@
 #include <stdint.h>
 #include "Cache.h"
 
-#define L1_NUM_LINES 256
-
 void resetTime();
 
 uint32_t getTime();
@@ -24,12 +22,13 @@ void accessL1(uint32_t, uint8_t *, uint32_t);
 typedef struct CacheLine {
   uint8_t Valid;
   uint8_t Dirty;
+  uint8_t Index; // to identify the cache line
   uint32_t Tag;
 } CacheLine;
 
 typedef struct Cache {
   uint32_t init;
-  CacheLine lines[L1_NUM_LINES];
+  CacheLine lines[L1_NUM_LINES * sizeof(CacheLine)];
 } Cache;
 
 /*********************** Interfaces *************************/
