@@ -61,10 +61,6 @@ void accessL1(uint32_t address, uint8_t *data, uint32_t mode)
     offset = address << 26;
     offset = offset >> 26;
 
-    printf("Tag: %d\n", Tag);
-    printf("Index: %d\n", index);
-    printf("Offset: %d\n", offset);
-
     CacheLine *Line = &SimpleCache.lines[index];
 
     // addres without offset
