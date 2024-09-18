@@ -1,5 +1,5 @@
-#ifndef L2CACHE_H
-#define L2CACHE_H
+#ifndef SIMPLECACHE_H
+#define SIMPLECACHE_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,11 +18,12 @@ void accessDRAM(uint32_t, uint8_t *, uint32_t);
 
 void initCache();
 void accessL1(uint32_t, uint8_t *, uint32_t);
+void accessL2(uint32_t, uint8_t *, uint32_t);
 
 typedef struct CacheLine {
   uint8_t Valid;
   uint8_t Dirty;
-  uint8_t Index; // to identify the cache line
+  uint16_t Index;
   uint32_t Tag;
 } CacheLine;
 
