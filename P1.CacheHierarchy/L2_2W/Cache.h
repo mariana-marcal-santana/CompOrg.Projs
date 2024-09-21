@@ -10,6 +10,8 @@
 // new
 #define L1_NUM_LINES 256
 #define L2_NUM_LINES 512
+#define L2_NUM_SETS 256
+#define SET_NUM_LINES 2
 // new
 
 #define MODE_READ 1
