@@ -7,3 +7,4 @@ all:
 
 clean:
 	rm $(TARGET)
+	rm -f L22W.out
