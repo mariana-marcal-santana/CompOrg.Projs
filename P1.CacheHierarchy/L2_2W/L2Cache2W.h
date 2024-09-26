@@ -30,17 +30,17 @@ typedef struct CacheLine {
 typedef struct CacheSet {
   uint8_t oldest; // 0 or 1 to know which block is the oldest
   uint16_t Index;
-  CacheLine blocks[2];
+  CacheLine lines[SET_NUM_LINES];
 } CacheSet;
 
 typedef struct L1Cache {
   uint32_t init;
-  CacheLine lines[256];
+  CacheLine lines[L1_NUM_LINES];
 } L1Cache;
 
 typedef struct L2Cache {
   uint32_t init;
-  CacheSet sets[256];
+  CacheSet sets[L2_NUM_SETS];
 } L2Cache;
 
 /*********************** Interfaces *************************/

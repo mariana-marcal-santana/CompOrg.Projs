@@ -78,7 +78,6 @@ void accessL1(uint32_t address, uint8_t *data, uint32_t mode)
             accessDRAM(MemAddress, &(L1Cache[index * BLOCK_SIZE]), MODE_WRITE); 
         }
 
-
         // Copy new block to cache and update
         memcpy(&(L1Cache[index * BLOCK_SIZE]), TempBlock, BLOCK_SIZE); 
         Line->Valid = 1;
