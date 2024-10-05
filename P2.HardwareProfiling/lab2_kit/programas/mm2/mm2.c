@@ -49,6 +49,7 @@ int main() {
     int16_t mul1[N][N];
     int16_t mul2[N][N];
     int16_t res[N][N];
+    int16_t tmul2[N][N];
 
     setup(mul1, mul2, res);
 
@@ -109,7 +110,9 @@ int main() {
     /* Gets the starting time in microseconds */
     long long const start_usec = PAPI_get_real_usec();
 
-    multiply_matrices(mul1, mul2, res);
+    transpose(mul2, tmul2);
+
+    multiply_matrices(mul1, tmul2, res);
 
     /************************************/
 

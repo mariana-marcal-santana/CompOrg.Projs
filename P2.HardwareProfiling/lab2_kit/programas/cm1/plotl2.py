@@ -118,7 +118,7 @@ for cache_size, values in data_dict.items():
 # Configure the plot
 plt.xlabel('Stride')
 plt.ylabel('Average Misses')
-plt.title('Average Misses VS Stride for Cache Sizes')
+plt.title('Average Misses VS Stride for Array Sizes')
 plt.xscale('log', base=2)
 plt.legend()
 plt.grid(True)
