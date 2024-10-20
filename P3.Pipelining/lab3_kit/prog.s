@@ -11,7 +11,7 @@ C:          .word 0,0,0,0
             .word 0,0,0,0
             .word 0,0,0,0
             .word 0,0,0,0
-
+    
             .code
             daddi $1, $zero, 0 ; i = 0
             daddi $5, $zero, 16 ; value of N

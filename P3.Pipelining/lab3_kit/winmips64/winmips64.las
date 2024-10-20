@@ -1,1 +1,1 @@
-E:\Tecnico\OCLab3\progs\prog.s
+Z:\home\mmarcalsantana\CompOrg.Projs\P3.Pipelining\lab3_kit\prog2_5.s
